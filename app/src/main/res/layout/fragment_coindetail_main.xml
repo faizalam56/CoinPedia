@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:weightSum="10"
+    >
+            // coin name, icon
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/app_bar_header"
+        android:weightSum="2"
+        android:layout_weight="1.5"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:layout_weight="2"
+            >
+        <ImageView
+            android:id="@+id/idCoinIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/not_image"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/idCoinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-- -- --"
+                android:textColor="@color/White"
+                android:textSize="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin_small"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+            // Top - price percentage
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@color/dark_grey"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_weight="2.25"
+                android:gravity="center"
+                >
+                        <TextView
+                            android:id="@+id/idPriceTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="NA"
+                            android:textColor="@color/White"
+                            android:textSize="36dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/idPercTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="NA"
+                            android:textColor="@color/Green"
+                            android:textSize="24dp" />
+            </LinearLayout>
+    <TextView
+        android:id="@+id/idTimeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date shown here"
+        android:textSize="12dp"
+        android:textColor="@color/White"
+        android:background="@color/dark_grey"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal|center_vertical"
+        />
+    //Progressbar
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/idHorizontalSPB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:spb_sections_count="4"
+        app:spb_color="@color/Black"
+        app:spb_speed="2.0"
+        app:spb_stroke_width="4dp"
+        app:spb_stroke_separator_length="4dp"
+        app:spb_reversed="false"
+        app:spb_mirror_mode="false"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.5"
+        app:spb_progressiveStop_speed="3.4"
+        android:visibility="gone"
+        />
+
+    //Section - Price
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/size_8"
+            android:text="Price"
+            android:textColor="@color/Black"
+            android:textStyle="bold"
+            android:background="#dddddd"
+            />
+        //Today's Open
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/grey" />
+
+            <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/round_view_detail"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/Black"
+                    android:text="Today's Open" />
+
+                <TextView
+                    android:id="@+id/idOpenTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/Black"
+                    android:text="NA" />
+    </LinearLayout>
+</FrameLayout>
+        //High Low
+        //HIGH
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today's High"
+                        android:textColor="@color/Black"/>
+
+                    <TextView
+                        android:id="@+id/idHighTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="NA"
+                        android:textColor="@color/Black"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/app_bar_header" />
+                </LinearLayout>
+            </FrameLayout>
+
+            //LOW
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Today's Low"
+                        android:textColor="@color/Black"
+                        />
+
+                    <TextView
+                        android:id="@+id/idLowTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="NA"
+                        android:textColor="@color/Black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/app_bar_header" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    //Network
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/size_8"
+                    android:text="Network"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    />
+                <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_gravity="center_vertical"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/round_view_detail"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Market Capitalisation"
+                            android:textColor="@color/Black"
+                            />
+
+                        <TextView
+                            android:id="@+id/idMktCapTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="NA"
+                            android:textColor="@color/Black"
+                            />
+                            </LinearLayout>
+                            </FrameLayout>
+             // CHANGE
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Change"
+                                android:textColor="@color/Black"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center_horizontal"
+                                >
+                            <TextView
+                                android:id="@+id/idChangeTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NA"
+                                android:textColor="@color/Black"
+                                />
+                                <TextView
+                                    android:id="@+id/idChangeInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:text="^"
+                                    android:layout_marginLeft="@dimen/activity_horizontal_margin_small"
+                                     />
+                            </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/app_bar_header"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+                </FrameLayout>
+
+                // CURRENTLY RELEASED
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Currency Released"
+                                android:textColor="@color/Black"
+                                />
+
+                            <TextView
+                                android:id="@+id/idCurrencyRelTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="NA"
+                                android:textColor="@color/Black"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/app_bar_header"
+                                android:layout_gravity="center_horizontal"/>
+                        </LinearLayout>
+                        </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            // SUBMIT
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        >
+            <Button
+            android:id="@+id/idGoGraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view_app_color"
+            android:text="Graphical Stats"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:layout_marginTop="@dimen/activity_horizontal_margin_small"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin_small"
+            />
+    </FrameLayout>
+
+</LinearLayout>

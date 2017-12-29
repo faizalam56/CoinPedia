@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="0dp"
+    >
+    <ImageView
+        android:id="@+id/idBot"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_chat_bot"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/round_view_chat_assistant"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/chat_company_reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_company_reply_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:text="User1"
+                android:textSize="4sp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                style="@style/chat_text_message_style"
+                android:paddingLeft="20dp"
+                android:autoLink="web"
+                android:maxWidth="280dp"
+                android:text="Rahul Agrawal is a good boy but he does not know what he wants." />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/chat_company_reply_text"
+            android:layout_marginLeft="10dp"
+            style="@style/chat_timings"
+            android:paddingRight="10dp"
+            android:textColor="@color/app_bar_header"
+            android:paddingBottom="5dp"
+            android:layout_toRightOf="@id/chat_company_reply_text"
+            android:text="1"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

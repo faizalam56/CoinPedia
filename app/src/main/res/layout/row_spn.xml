@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRowSPN"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="16dp"
+    android:textColor="@color/Black"
+    android:paddingLeft="@dimen/activity_horizontal_margin_small"
+    android:paddingTop="4dp"
+    android:paddingRight="@dimen/activity_horizontal_margin_small"
+    android:paddingBottom="4dp"
+    android:textStyle="bold"
+    >
+
+</TextView>

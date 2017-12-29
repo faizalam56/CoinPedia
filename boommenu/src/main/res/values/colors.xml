@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_selected">#FF0000</color>
+    <color name="app_bar_header">#00FF00</color>
+    <color name="float_small_piece">#FFFFFF</color>
+    <color name="float_big_piece">#444444</color>
+
+
+</resources>

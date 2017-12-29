@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="coinpedia.app.com.navtest.BaseActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+       >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/app_bar_header"
+            android:elevation="8dp"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+            tools:context="com.example.cybermatrix3.testtwo.CustomToolbarActivity">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_top">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        >
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            >
+                            <Button
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="@drawable/nav_menu"
+                                android:id="@+id/title_bar_left_menu"
+                                android:layout_gravity="left|center_vertical"
+                                android:layout_margin="10dp"
+                                android:layout_weight="2"
+                                android:visibility="gone"
+                                />
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            >
+
+                            <ImageView
+                                android:id="@+id/idLogoIV"
+                                android:layout_width="156dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:src="@drawable/textcoinpedia_w"
+                                android:scaleType="fitCenter"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            >
+                            <ToggleButton
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:textOn=""
+                                android:textOff=""
+                                android:background="@drawable/nav_menu"
+                                android:id="@+id/right_menu_toggle"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_margin="10dp"
+                                android:layout_weight="2"
+                                android:visibility="gone"
+                                />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#a2a5af"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/content_main" />-->
+    <FrameLayout android:id="@+id/activity_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF0000"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>

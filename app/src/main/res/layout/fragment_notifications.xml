@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:weightSum="10"
+    >
+
+    //SECTION-1
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2">
+        // Notification - switch
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:background="@color/app_bar_header"
+        >
+
+        <TextView
+            android:id="@+id/tv_men"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Alert"
+            android:textSize="16dp"
+            android:textColor="@color/White"
+            />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:theme="@style/Color1SwitchStyle"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+        // Choose Currency section
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/choose_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Currency"
+                android:textColor="@color/Black"
+                android:layout_alignParentLeft="true"
+                android:progress="1"
+                />
+            <FrameLayout
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_view_chat_user"
+                android:layout_alignParentRight="true"
+                >
+                <Spinner
+                    android:layout_gravity="center"
+                    android:id="@+id/spnr_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/bitcoin"
+                    android:dropDownWidth="128dp"
+                    >
+                </Spinner>
+            </FrameLayout>
+
+        </RelativeLayout>
+        </LinearLayout>
+    // SECTION - 2
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/dark_grey"
+            android:padding="10dp"
+            android:layout_weight="2.5">
+            <TextView
+                android:id="@+id/tv_currentPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Current Price"
+                android:textSize="22sp"
+                android:textColor="@color/White"
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:id="@+id/tv_currentPriceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$ "
+                    android:textColor="@color/White"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/tv_coin_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-- -- --"
+                    android:textColor="@color/White"
+                    android:textSize="36dp" />
+            </LinearLayout>
+        </LinearLayout>
+    // SECTION - 3
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            >
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Select min and max price range"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/activity_horizontal_margin_small"
+                android:background="#dddddd"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="$ "
+                        android:textColor="@color/app_bar_header"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_min_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- -- --"
+                        android:textColor="@color/app_bar_header"
+                        android:textSize="20sp"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--<SeekBar
+                android:id="@+id/seekbar_max_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/one"
+                android:layout_marginTop="20dp"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
+                android:progress="1"
+                android:thumb="@mipmap/button_seekbar" />-->
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/discrete_seekbar_min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dsb_min="2"
+                app:dsb_max="15"
+                app:dsb_progressColor="@color/app_bar_header"
+                app:dsb_indicatorColor="@color/app_bar_header"
+                app:dsb_trackColor="@color/app_bar_header"
+                app:dsb_rippleColor="@color/app_bar_header"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:id="@+id/tv_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="$ "
+                        android:textColor="@color/app_bar_header"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_max_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- -- --"
+                        android:textColor="@color/app_bar_header"
+                        android:textSize="20sp"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/discrete_seekbar_max"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dsb_progressColor="@color/app_bar_header"
+                app:dsb_indicatorColor="@color/app_bar_header"
+                app:dsb_trackColor="@color/app_bar_header"
+                app:dsb_rippleColor="@color/app_bar_header"/>
+        </LinearLayout>
+    // SECTION - 4
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        >
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view_app_color"
+            android:text="SAVE"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:textColor="@color/White"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="@dimen/activity_horizontal_margin_small"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin_small"
+            />
+
+    </FrameLayout>
+</LinearLayout>

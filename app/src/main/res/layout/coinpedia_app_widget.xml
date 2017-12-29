@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/widget_shape"
+    android:padding="5dp"
+    android:id="@+id/ll_app_widget">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_coinpedia_w"/>
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:src="@drawable/pediatext"/>
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_alignParentRight="true"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/setting"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/tv_coin_shortName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="@color/Black"/>
+            <ImageView
+                android:id="@+id/iv_coin_logo1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btc172"
+                />
+
+            <TextView
+                android:id="@+id/tv_coinPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 2,055.00"
+                android:textColor="@color/Black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_coinPercent_status1"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.70%"
+                android:textColor="@color/Green"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/tv_coin_shortName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="@color/Black"/>
+            <ImageView
+                android:id="@+id/iv_coin_logo2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btc172"
+                />
+
+            <TextView
+                android:id="@+id/tv_coinPrice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 2,055.00"
+                android:textColor="@color/Black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_coinPercent_status2"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.70%"
+                android:textColor="@color/Green"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/tv_coin_shortName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="@color/Black"/>
+            <ImageView
+                android:id="@+id/iv_coin_logo3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btc172"
+                />
+
+            <TextView
+                android:id="@+id/tv_coinPrice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 2,055.00"
+                android:textColor="@color/Black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_coinPercent_status3"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.70%"
+                android:textColor="@color/Green"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/tv_coin_shortName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:textColor="@color/Black"/>
+            <ImageView
+                android:id="@+id/iv_coin_logo4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_btc172"
+                />
+
+            <TextView
+                android:id="@+id/tv_coinPrice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 2,055.00"
+                android:textColor="@color/Black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_coinPercent_status4"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.70%"
+                android:textColor="@color/Green"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

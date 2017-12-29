@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="@color/app_bar_header"
+    >
+//PART1
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:layout_weight="10"
+        android:background="@color/White"
+        >
+        <LinearLayout
+            android:id="@+id/idLayoutFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:weightSum="5"
+            android:gravity="center_horizontal|center_vertical"
+            >
+            <TextView
+                android:id="@+id/idPreCoinValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="0"
+                android:textColor="#444"
+                android:maxLength="16"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/activity_horizontal_margin_small"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/idPostCoinINRTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="0"
+                android:textColor="#444"
+                android:maxLength="16"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/activity_horizontal_margin_small"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/idLayoutSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="5"
+            android:weightSum="5"
+            >
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                >
+                <FrameLayout
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_view_default"
+                    >
+            <Spinner
+                android:id="@+id/idCoinListSPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="128dp"
+                android:entries="@array/defaultVal"
+                android:layout_gravity="center_horizontal"
+                />
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_convert_dark"
+                android:scaleType="fitStart"
+                android:layout_gravity="center_horizontal|top"
+                android:paddingTop="@dimen/activity_horizontal_margin_small"
+                />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                >
+            <TextView
+                android:id="@+id/idConvCoinName"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                android:textSize="16dp"
+                android:textColor="@color/Black"
+                android:padding="@dimen/activity_horizontal_margin_small"
+                android:background="@drawable/round_view_default"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+// PART 2
+    <TableLayout
+        android:id="@+id/idKeypadLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_height="wrap_content"
+            android:textSize="14pt"
+            android:padding="4pt"
+            android:gravity="right"
+            android:text="@string/result_default"
+            android:visibility="gone"
+            />
+        <View
+            android:layout_height="2dip"
+            android:background="#FF909090"
+            android:visibility="invisible"/>
+
+        // 123
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="1pt"
+            android:id="@+id/tableRow2"
+            android:background="@color/Black"
+            >
+            <Button
+                android:text="@string/buttonOne"
+                android:textSize="14pt"
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:onClick="handleClick"
+                android:background="@drawable/calc_button_bkg"
+                />
+            <Button
+                android:text="@string/buttonTwo"
+                android:textSize="14pt"
+                android:id="@+id/button2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+            <Button
+                android:text="@string/buttonThree"
+                android:textSize="14pt"
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+        </TableRow>
+        // 456
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tableRow3"
+            android:background="@color/Black"
+            >
+            <Button
+                android:text="@string/buttonFour"
+                android:textSize="14pt"
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+            <Button
+                android:text="@string/buttonFive"
+                android:textSize="14pt"
+                android:id="@+id/button5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+            <Button
+                android:text="@string/buttonSix"
+                android:textSize="14pt"
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+        </TableRow>
+        //789
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tableRow4"
+            android:background="@color/Black"
+            >
+            <Button
+                android:text="@string/buttonSeven"
+                android:textSize="14pt"
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="handleClick"
+                android:text="@string/buttonEight"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:textSize="14pt" />
+
+            <Button
+                android:text="@string/buttonNine"
+                android:textSize="14pt"
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+        </TableRow>
+        // 0
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/tableRow5"
+            android:background="@color/Black"
+            >
+
+            <Button
+                android:id="@+id/buttonPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="handleClick"
+                android:text="@string/buttonPoint"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:textSize="14pt" />
+            <Button
+                android:text="@string/buttonZero"
+                android:textSize="14pt"
+                android:id="@+id/button0"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/White"
+                android:background="@drawable/calc_button_bkg"
+                android:onClick="handleClick" />
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="handleClick"
+                android:text="@string/btn_cancel"
+                android:textColor="@color/app_bar_header"
+                android:background="@drawable/calc_button_bkg"
+                android:textSize="14pt" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
